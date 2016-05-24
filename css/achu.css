@@ -1,0 +1,543 @@
+/*
+Author: Aswathi Prakash
+Date: 17-May-2016
+*/
+
+@font-face {
+    font-family: Candara;
+    src: url("../fonts/Candara.otf");
+}
+
+@font-face {
+    font-family: Candara;
+    src: url("../fonts/Candara.ttf");
+}
+
+body {
+    font: normal 16px "Candara" !important;
+    margin: 0;
+    overflow-x: hidden;
+}
+.container-fluid {
+    padding: 0;
+}
+.navbar {
+    font-size: 18px;
+    border-top: 5px solid #00cccc; 
+}
+.navbar-nav li {
+    text-transform: lowercase;
+}
+.navbar-toggle {
+    border: none;
+    background: transparent !important;
+}
+.navbar-toggle:hover {
+     background: transparent !important;
+}
+
+/*
+  .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+  }
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+
+
+.navbar-toggle.collapsed  .top-bar {
+    transform: rotate(0);
+  }
+.navbar-toggle.collapsed  .middle-bar {
+    opacity: 1;
+  }
+.navbar-toggle.collapsed  .bottom-bar {
+    transform: rotate(0);
+  }
+*/
+
+
+/*to transform menu icon to arrow icon*/
+#navMenuIcon {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    margin: 20px 0 0 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+#navMenuIcon span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 50%;
+    background: #696972;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#navMenuIcon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+#navMenuIcon span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+#navMenuIcon span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+#navMenuIcon.open span:nth-child(1) {
+    -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    transform: rotate(35deg);
+    top: -1px;
+    left: 17px;
+    width: 35%;
+}
+#navMenuIcon.open span:nth-child(3) {
+    -webkit-transform: rotate(-35deg);
+    -moz-transform: rotate(-35deg);
+    -o-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+    top: 21px;
+    left: 17px;
+    width: 35%;
+}
+.navbar-brand {
+    background: url("../img/") no-repeat center;    
+/*    padding: 0px 135px;*/
+    color: #ddd;
+    font-size: 30px;
+    font-weight: 800;
+}
+h1.insetType {
+  padding-left: 50px; /* The padding is just there to move the h1 element to the center of the div */
+  padding-top: 17px;
+  font-size: 32px;
+  color: #ddd;
+  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+.circleHeadItem {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+	cursor: default;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.circleHeadThumb {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	box-shadow: inset 0 0 0 15px rgba(255,255,255, 0.5);
+	
+	-webkit-transform-origin: 95% 40%;
+	-moz-transform-origin: 95% 40%;
+	-o-transform-origin: 95% 40%;
+	-ms-transform-origin: 95% 40%;
+	transform-origin: 95% 40%;
+	
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.circleHeadThumb:after {
+	content: '';
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	border-radius: 50%;
+	top: 40%;
+	left: 95%;
+	margin: -4px 0 0 -4px;
+	background: rgb(14,14,14);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%, rgba(125,126,125,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(14,14,14,1)), color-stop(100%,rgba(125,126,125,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+	box-shadow: 0 0 1px rgba(255,255,255,0.9);
+}
+.circleHeadImg { 
+	background-image: url("../img/female-placeholder_1x.png");
+	z-index: 12;
+}
+.circleHeadInfo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+/*	background: #BBA6A6;*/
+    background: #9EDED5;
+	box-shadow: inset 0 0 0 5px rgba(0,0,0,0.05);
+    padding: 45px 20px;
+}
+.circleHeadInfo h3 {
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	letter-spacing: 2px;
+	font-size: 18px;
+	margin: 0 60px;
+	padding: 22px 0 0 0;
+	height: 85px;
+	text-shadow: 
+		0 0 1px #fff, 
+		0 1px 2px rgba(0,0,0,0.3);
+}
+.circleHeadInfo p {
+	color: #fff;
+	padding: 10px 5px;
+	font-style: italic;
+	margin: 0 30px;
+	font-size: 12px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+    z-index: 9
+}
+.circleHeadInfo p a {
+	display: block;
+	color: #333;
+	width: 80px;
+	height: 80px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 50%;
+	color: #fff;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 9px;
+	letter-spacing: 1px;
+	padding-top: 24px;
+	margin: 7px auto 0;
+	opacity: 0;
+	
+	-webkit-transition: 
+		-webkit-transform 0.3s ease-in-out 0.2s,
+		opacity 0.3s ease-in-out 0.2s,
+		background 0.2s linear 0s;
+	-moz-transition: 
+		-moz-transform 0.3s ease-in-out 0.2s,
+		opacity 0.3s ease-in-out 0.2s,
+		background 0.2s linear 0s;
+	-o-transition: 
+		-o-transform 0.3s ease-in-out 0.2s,
+		opacity 0.3s ease-in-out 0.2s,
+		background 0.2s linear 0s;
+	-ms-transition: 
+		-ms-transform 0.3s ease-in-out 0.2s,
+		opacity 0.3s ease-in-out 0.2s,
+		background 0.2s linear 0s;
+	transition: 
+		transform 0.3s ease-in-out 0.2s,
+		opacity 0.3s ease-in-out 0.2s,
+		background 0.2s linear 0s;
+		
+	-webkit-transform: translateX(60px) rotate(90deg);
+	-moz-transform: translateX(60px) rotate(90deg);
+	-o-transform: translateX(60px) rotate(90deg);
+	-ms-transform: translateX(60px) rotate(90deg);
+	transform: translateX(60px) rotate(90deg);
+		
+	-webkit-backface-visibility: hidden;
+}
+.circleHeadInfo p a:hover {
+	background: rgba(255,255,255,0.5);
+}
+.circleHeadItem:hover .circleHeadThumb {
+	box-shadow: inset 0 0 0 15px rgba(255,255,255, 0.5), 0 1px 3px rgba(0,0,0,0.2);
+	-webkit-transform: rotate(-110deg);
+	-moz-transform: rotate(-110deg);
+	-o-transform: rotate(-110deg);
+	-ms-transform: rotate(-110deg);
+	transform: rotate(-110deg);
+}
+.circleHeadItem:hover .circleHeadInfo p a{
+	opacity: 1;
+	-webkit-transform: translateX(0px) rotate(0deg);
+	-moz-transform: translateX(0px) rotate(0deg);
+	-o-transform: translateX(0px) rotate(0deg);
+	-ms-transform: translateX(0px) rotate(0deg);
+	transform: translateX(0px) rotate(0deg);
+}
+.circleHeadGrid {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+.circleHeadGrid:after,
+.circleHeadItem:before {
+	content: '';
+    display: table;
+}
+.circleHeadGrid:after {
+	clear: both;
+}
+.circleHeadGrid li {
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin: 20px;
+}
+.portfolios {
+	height:200px;
+    background: #fff;
+}
+.myShadow
+{
+  position: relative;
+}
+.myShadow:before, .myShadow:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(-3deg);
+}
+.myShadow:after
+{
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+.indiaOffice {
+    background: url("../img/indiaOffice.png") no-repeat;
+    background-size: cover;
+}
+.textLabel {
+    color: #ABA7A7;
+}
+.contactLabel{
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #eee;
+}
+.contactLabel input,
+.contactLabel textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 20px;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+}
+.contactLabel label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    color: #dddddd;
+    font-size: 14px;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .6s ease,opacity .6s ease;
+    -moz-transition: top .6s ease,opacity .6s ease;
+    -ms-transition: top .6s ease,opacity .6s ease;
+    transition: top .6s ease,opacity .6s ease;
+}
+.contactLabel::not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid #eee;
+}
+.contactLabelValue label {
+    top: 0;
+    opacity: 1;
+}
+.contactLabelFocus label {
+    color: #18bc9c;
+}
+#contactMe form .row:first-child .contactLabel{
+    border-top: 1px solid #eee;
+}
+.text-danger, .text-danger:hover {
+    color: #e74c3c;
+}
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #597ea2;
+}
+.submitBtn {
+    width: 100px;
+    background: #18bc9c;
+    color: #ffffff;
+    font-size: 14px;
+    border: 0;
+    border-radius: 2px;    
+    padding: 8px 4px 8px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.homePageBtnWidth {
+    min-width: 105px;
+}
+.submitBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.submitBtn span:after {
+    /* content: '>>'; */
+    content: url("../img/savesearcharrow.png");
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;
+    top: -2px;
+    right: -25px;
+    transition: 0.5s;
+}
+.submitBtn:hover span {
+    padding-right: 15px;
+}
+.submitBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.socialSprite {
+    padding: 18px;
+    display: inline-block;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.socialSprite:hover {
+    opacity: 1;
+}
+.google {
+    background: url("../img/google.png") no-repeat;
+}
+.facebook {
+    background: url("../img/facebook.png") no-repeat;
+}
+.linkedin {
+    background: url("../img/linkedin.png") no-repeat;
+}
+.printerest {
+    background: url("../img/google.png") no-repeat;
+}
+.paper {
+    background: url("../img/image1.jpeg") no-repeat;
+    height: 584px;
+    width: 100%;
+    background-size: cover;
+}
+hr.star-primary {
+    border-color: #2c3e50;
+}
+hr.star-light, hr.star-primary {
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+h1.background {
+    position: relative;
+    z-index: 1;
+}
+h1.background:before {
+    border-top: 2px solid #dfdfdf;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+    z-index: -1;
+}
+h1.background span {
+    background: #fff;
+    padding: 0 15px;
+    color: #696972;
+}
+.toTop {
+    position: fixed;
+    width: 42px;
+    height: 42px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    right: 0;
+    margin-right: 20px;
+    background: #f8f8f8;
+    padding: 12px;
+    bottom: 45px;
+}
+footer {
+    background: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    padding: 15px 0 10px 0;
+    color: #777;
+}
+ol, ul {
+    margin: 0;
+}
+/* Removing input background colour for Chrome autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}

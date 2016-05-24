@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <head>
+        <title>Aswathi Prakash</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/scrollingNav.css">
+        <link rel="stylesheet" href="../css/achu.css">      
+
+        <script src="../js/jquery-1.12.3.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/scrollingNav.js"></script>
+        <script src="../js/achu.js"></script>
+    </head>
+    <body>
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button id="navMenuIcon" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span></span>
+                <span></span>
+                <span></span>                        
+              </button>
+              <a class="navbar-brand" href="#">Me</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="tolowercase"><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skillset">Skillset</a></li>
+                <li><a href="#contactMe">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+<!-- About Container -->
+<section id="about">
+    <div class="container-fluid text-center paper" style="margin-top:75px;">
+        <div class="container">
+<!--            <img src="../img/female-placeholder_1x.png" class="img-circle" alt="aSwAtHi PrAkAsH" width="260" height="260"> -->
+<!--
+            <div id="" class="col-sm-4">
+                <h4>developer</h4>
+                <p>Front-end developer who focuses on Efficient, Clean and Elegant code</p>
+            </div>
+            <div id="">
+                
+            </div>
+-->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="background"><span>About</span></h3>
+            </div>
+        </div>
+            <div class="col-sm-6">
+                <h4 class="text-center">Who am I?</h4>
+                <p class="text-center">Professional Front End Developer</p>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="text-center">What do I do?</h4>
+                <p class="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+</section>
+
+<!-- Portfolio Container -->
+<section id="portfolio">
+   <div class="container-fluid text-center" style="margin-top:75px;background: #f2f2f2;"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="background"><span style="background: #f2f2f2;">Portfolio</span></h3>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+        
+<!-- Skillset Container -->
+<section id="skillset">
+    <div class="container-fluid text-center">   <!-- style="margin-top:75px;background: #696972;"-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="background"><span>Skillset</span></h3>
+<!--                    <hr class="star-primary">-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="../img/html5.png" width="115px" height="81px">
+                </div>
+                <div class="col-sm-4">
+                    <img src="../img/css3.png" width="84px" height="80px">
+                </div>
+                <div class="col-sm-4">
+                    <img src="../img/jscript.png" width="99px" height="80px">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="../img/bootstrap-logo.jpg" width="200px" height="60px">
+                </div>
+                <div class="col-sm-3">
+                    <img src="../img/AngularJS_logo.svg.png" width="170px" height="50px">
+                </div>
+                <div class="col-sm-3">
+                    <img src="../img/jquery.png" width="160px" height="40px">
+                </div>
+                <div class="col-sm-3">
+                    <img src="../img/jqueryMobile.png" width="195px" height="90px">
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
+</section>
+
+<!-- Contact Me Container -->
+<section id="contactMe">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3 class="background"><span>Contact</span></h3>
+<!--                <hr class="star-primary">-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <form name="sentMessage" id="contactForm" novalidate="" class="error">
+                    <label class="textLabel">Send me an Email</label>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 contactLabel controls">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 contactLabel controls">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address." aria-invalid="false">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 contactLabel controls">
+                            <label>Message</label>
+                            <textarea rows="5" class="form-control" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button class="submitBtn pull-right"><span>Send</span></button>
+<!--                            <button type="submit" class="btn submitBtn btn-md pull-right">Send</button>-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>
+    </div>
+</section>
+        <section>
+        <div class="container-fluid">
+            </div>
+        </section>
+    <a href="#myPage" class="toTop pull-right hidden-xs" title="To Top" style="display: block;"><span class="glyphicon glyphicon-chevron-up"></span></a>    
+
+        <footer>
+            <div class="container-fluid">
+                <div class="container">
+                    &copy;2016 aswathiprakash
+                    <ul class="pull-right">
+                        <li class="socialSprite google" title="Follow me on Google plus"><a href="www.google.com"></a></li>
+                        <li class="socialSprite facebook" title="Follow me on Facebook"><a href="www.facebook.com"></a></li>
+                        <li class="socialSprite linkedin" title="Follow me on LinkedIn"><a href="www.linkedin.com"></a></li>
+                        <li class="socialSprite printerest" title="Follow me on Printerest"><a href="www.printerest.com"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
